@@ -1,0 +1,198 @@
+/* Основные стили для контейнеров */
+main > .container, main > .container-fluid {
+    padding: 70px 15px 20px;
+}
+
+/* Стили для подвала */
+.footer {
+    background-color: #f5f5f5;
+    font-size: .9em;
+    height: 60px;
+}
+
+.footer > .container, .footer > .container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Стили для не установленных элементов */
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* Добавление иконок сортировки в ссылки сортировки GridView */
+a.asc:after, a.desc:after {
+    content: '';
+    left: 3px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: solid 5px transparent;
+    margin: 4px 4px 2px 4px;
+    background: transparent;
+}
+
+a.asc:after {
+    border-bottom: solid 7px #212529;
+    border-top-width: 0;
+}
+
+a.desc:after {
+    border-top: solid 7px #212529;
+    border-bottom-width: 0;
+}
+
+/* Установка white-space для таблиц GridView */
+.grid-view th,
+.grid-view td:last-child {
+    white-space: nowrap;
+}
+
+/* Минимальная ширина для фильтров в GridView */
+.grid-view .filters input,
+.grid-view .filters select {
+    min-width: 50px;
+}
+
+/* Стили для блока подсказок */
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+/* Стили для блока ошибок */
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* Выравнивание кнопки выхода в навигационной панели */
+.navbar form > button.logout {
+    padding-top: 7px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media(max-width:767px) {
+    .navbar form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+.navbar form > button.logout:focus,
+.navbar form > button.logout:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar form > button.logout:focus {
+    outline: none;
+}
+
+/* Стили для виджета хлебных крошек */
+.breadcrumb {
+    background-color: var(--bs-gray-200);
+    border-radius: .25rem;
+    padding: .75rem 1rem;
+}
+
+.breadcrumb-item > a {
+    text-decoration: none;
+}
+
+/* Светло-серый фон для страницы */
+.light-gray-bg {
+    background-color: #f8f9fa; /* Светло-серый фон */
+}
+
+/* Стили для навигационной панели */
+.navbar-custom {
+    border-radius: 50px; /* Закругление углов */
+    margin: 10px auto; /* Центрирование и отступ сверху и снизу */
+    max-width: 90%; /* Максимальная ширина */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для эффекта "всплывания" */
+    background-color: #800000 !important; /* Бордовый цвет фона */
+}
+
+/* Жирный белый текст */
+.bold-white-text {
+    font-weight: bold;
+    color: white !important;
+}
+
+/* Стили для овальной кнопки */
+.btn-oval {
+    border-radius: 50px; /* Закругление углов для создания овала */
+    padding: 8px 20px; /* Отступы внутри кнопки */
+    color: white; /* Белый текст */
+    background-color: #800000; /* Бордовый цвет фона */
+    border: 2px solid white; /* Белая рамка */
+}
+
+.btn-oval:hover {
+    background-color: #600000; /* Бордовый цвет фона при наведении */
+    color: white; /* Белый текст при наведении */
+}
+
+/* Добавляем стили для текста в шапке */
+.navbar-custom .navbar-nav .nav-link {
+    color: white !important; /* Белый текст для пунктов меню */
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #f8f9fa !important; /* Светло-серый текст при наведении */
+}
+/* site.css */
+.site-contact {
+    padding: 50px 0;
+    background: linear-gradient(135deg, #FF8888, #BBFFBB, #FFBBFF, #FFFFBB); /* Градиентный фон с бледно-красным цветом */
+}
+
+.site-contact .contact-title {
+    color: #dc3545; /* Бордовый цвет текста */
+    background-color: #fff; /* Белый цвет фона */
+    padding: 10px 20px; /* Отступы внутри рамки */
+    border-radius: 50px; /* Скругление углов */
+    display: inline-block; /* Чтобы рамка была только вокруг текста */
+    font-weight: bold; /* Жирный текст */
+    text-align: center; /* Центрирование текста */
+    margin: 0 auto; /* Центрирование блока */
+    max-width: 300px; /* Максимальная ширина блока */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для рамки */
+}
+
+.site-contact .card {
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 0.8rem; /* Уменьшенный размер шрифта */
+}
+
+.site-contact .card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 133px; /* Уменьшенная высота для изображений */
+    object-fit: cover; /* Масштабирование изображений */
+}
+
+.site-contact .card-body {
+    padding: 13.33px; /* Уменьшенный отступ */
+    flex: 1; /* Заполнение оставшегося пространства */
+}
+
+.site-contact .card-title {
+    font-size: 1rem; /* Уменьшенный размер шрифта */
+    font-weight: bold;
+    margin-bottom: 6.67px; /* Уменьшенный отступ */
+}
+
+.site-contact .list-unstyled li {
+    margin-bottom: 3.33px; /* Уменьшенный отступ */
+}
